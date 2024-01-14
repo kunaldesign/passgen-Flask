@@ -1,7 +1,8 @@
 FROM python:3.8.18-slim
 
 RUN pip install --upgrade pip
-RUN apt install gunicorn
+RUN apt-get install -y gunicorn
+RUN apt-get install -y python-gevent
 
 WORKDIR /app
 COPY . /app
