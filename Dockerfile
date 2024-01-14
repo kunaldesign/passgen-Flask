@@ -1,6 +1,7 @@
 FROM python:3.8.18-slim
 
 RUN pip install --upgrade pip
+RUN apt install gunicorn
 
 WORKDIR /app
 COPY . /app
